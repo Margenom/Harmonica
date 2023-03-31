@@ -1,11 +1,11 @@
-all: harp.png harp.svg
+all: harmonica.png harmonica.svg
 	
 
-harp.png: harp.dot
-	dot -Tpng harp.dot > harp.png
+harmonica.png: harmonica.dot
+	dot -Tpng harmonica.dot > harmonica.png
 
-harp.svg: harp.dot
-	dot -Tsvg harp.dot > harp.svg
+harmonica.svg: harmonica.dot
+	dot -Tsvg harmonica.dot > harmonica.svg
 
 clean:
-	rm harp.png harp.svg
+	rm harmonica.png harmonica.svg

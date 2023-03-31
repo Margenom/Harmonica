@@ -74,7 +74,7 @@
 (define (find-interv Notes) #f)
 
 (define Akk2 (map (lambda(a) (cons (cdr a) (car a))) '(
-	(ч1	1)
+	(ч1	0)
 	(m2	1)
 	(M2	2)
 	(m3	3)
@@ -95,9 +95,10 @@
 	(aug	4 8) ; M3 + M3
 	(sus2 2 7)
 	(sus4 5 7)
+	(quart 2 5 7)
 ; какието новые аккорды
-;	(s 7 11) ; трезвучие 2 четверти
-;	(S 7 8) ; трезвучие 4 четверти
+	(II 7 11) ; трезвучие 2 четверти
+	(IV 7 8) ; трезвучие 4 четверти
 )))
 (define Akk4 (map (lambda(a) (cons (cdr a) (car a))) '(
 ; Септакорды
@@ -110,8 +111,12 @@
 	(m7maj	3 7 11)
 	(dim7maj	3 6 10)
 
+	(M7sus2	2 7 10)
+	(M7sus4	5 7 10)
+	(M7quart 2 5 7 10)
+
 	(M7-5	4 10)
-	;(dim7s	3 9)
+	;(dim7-5	3 9)
 	(m7-5	3 10)
 )))
 (define Akkords (append Akk4 Akk3 Akk2))
