@@ -32,6 +32,7 @@
 (define blues '(3 2 1 1 3 2))
 (define jazz '(2 1 2 2 2 2 1))
 
+
 (define (M-show mod beg) (list-head (reverse (map tone-rev 
 	(fold-left (lambda(v p) (cons (modulo (+ p (car v)) 12) v)) (list beg) mod)))
 	(length mod)))
@@ -40,8 +41,8 @@
 	(map tone (append (list-tail Notelist 1) (list-head Notelist 1)))))
 
 ; если i - C то d - D, p - E, l - F, m - G, a - A, l - B
-(define natural-modes (list ionian dorian phrygian lydian mixolydian aeolian locrian))
 (define natural-modes-names '(ionian dorian phrygian lydian mixolydian aeolian locrian))
+(define natural-modes (list ionian dorian phrygian lydian mixolydian aeolian locrian))
 (define (M-by beg) (map (lambda(m n t) (list t n (M-show m (tone t)))) natural-modes natural-modes-names 
 	(M-show (car natural-modes) beg)))
 ; функция струпеней (аккордов построеных от них) лада
@@ -52,6 +53,14 @@
 ;V	домананта
 ;VI	субмедианта
 ;VII	восходящий вводной звук
+
+(define (St-gen mod beg)
+  (define mode (M-show mod (tone beg)))
+  (define (fmode lst) (map (lambda(i) (list-ref mode (- i 1))) lst))
+  ((lambda(u d) (map list (fmode u) (make-list (length u) #f) (fmode d)))
+   '(1 3 5 1 3 5 1 3 5 1)
+   '(2 5 7 2 4 6 7 2 4 6)
+  ))
 
 (define Interv '(
 	(- (6 0 тритон)
@@ -266,18 +275,14 @@
 
 
 ; overbends #t bends blow #f draw bends #t overbends
-(define C-major '(
-(Eb 	#t 	C #f D Db)
-(Ab 	#t 	E #f G Gb F)
-(C  	#t 	G #f B Bb A Ab)
-(Eb 	#t 	C #f D Db)
-(Gb 	#t 	E #f F)
-(Bb 	#t 	G #f A Ab)
-	(	C #f B 	#t Db)
-	(Eb 	E #f D 	#t F)
-	(Gb 	G #f F 	#t Ab)
-	(B Bb 	C #f A 	#t Db)
-))
+(define (H-major t)  (St-gen ionian t))
+(define (H-LeeOskar t) (St-gen lydian t))
+(define (H-open-minor t) (St-gen mixolydian t))
+(define (H-natural-minor t) (St-gen dorian t))
+(define (H-natural-minor-straight t) (St-gen aeolian t))
+(define (H-harmonic-minor t) (St-gen harmonic-minor t))
+
+(define (St-modif St . patch) #f)
 (define C-puddy '(
 (Eb 	#t 	C #f D Db)
 (Ab 	#t 	E #f G Gb F)
@@ -289,6 +294,18 @@
 	(Eb 	E #f D 	#t F)
 	(Gb 	G #f F 	#t Ab)
 	(B Bb 	C #f A 	#t Db)
+))
+(define C-harmonic-minor-cross '(
+	(C  #f D )
+	(Eb #f G )
+	(G  #f Bb)
+	(C  #f D )
+	(Eb #f Fs)
+	(G  #f Ab)
+	(C  #f B )
+	(Eb #f D )
+	(G  #f Fs)
+	(C  #f Ab)
 ))
 (define C-dim '(
 (Eb 	#t 	C #f D Db)
@@ -302,22 +319,6 @@
 (Eb 	#t 	C #f D Db)
 (Gb 	#t Eb 	  #f F E)
 ))
-
-;*
-(define C-LeeOskar '(
-(Eb 	#t 	C #f D Db)
-(Ab 	#t 	E #f G Gb F)
-(C  	#t 	A #f B Bb)
-(Eb 	#t 	C #f D Db)
-(Gb 	#t 	E #f Fs)
-(Bb 	#t 	G #f A Ab)
-	(	C #f B 	#t Db)
-	(Eb 	E #f D 	#t F)
-	(Gb 	G #f Fs #t Ab)
-	(B Bb 	C #f A 	#t Db)
-))
-
-
 (define C-unkminor (St-trans '( ;где взял не помню
 (C 	#t 	G #f B Bb)
 (F 	#t 	C #f E Eb D Db)
@@ -330,54 +331,6 @@
 	(E 	F #f D 		#t F)
 (Ab G Gb	A #f Gb 	#t Bb)
 ) 3))
-(define C-open-minor '( ;дорийско-миксолидийская
-(Eb 	#t 	C #f D Db)
-(Ab 	#t 	E #f G Gb F)
-(C  	#t 	G #f Bb A Ab)
-(Eb 	#t 	C #f D Db)
-(Gb 	#t 	E #f F)
-(Bb 	#t 	G #f A Ab)
-	(	C #f Bb	#t Db)
-	(Eb 	E #f D 		#t F)
-	(Gb 	G #f F 		#t Ab)
-	(B Bb 	C #f A 		#t Db)
-))
-(define C-natural-minor (St-trans '( ; transform from A
-(C 	#t 	A #f B Bb)
-(F 	#t 	C #f E Eb D Db)
-(Ab  	#t 	E #f G Gb F)
-(C 	#t 	A #f B Bb)
-(Eb 	#t 	C #f D Db)
-(G 	#t 	E #f Gb F)
-	(Ab	A #f G 		#t Bb)
-	( 	C #f B 		#t Db)
-	(Eb 	E #f D 		#t F)
-(Ab G Gb	A #f Gb 	#t Bb)
-) 3))
-(define C-harmonic-minor (St-trans '(
-(C 	#t 	A #f B Bb)
-(F 	#t 	C #f E Eb D Db)
-(A  	#t 	E #f Ab G Gb F)
-(C 	#t 	A #f B Bb)
-(Eb 	#t 	C #f D Db)
-(Gb 	#t 	E #f F)
-	(Ab	A #f Ab	#t Bb)
-	( 	C #f B 		#t Db)
-	(Eb 	E #f D 		#t F)
-(Ab G Gb	A #f F	 	#t Bb)
-) 3))
-(define C-harmonic-minor-cross '(
-	(C  #f D )
-	(Eb #f G )
-	(G  #f Bb)
-	(C  #f D )
-	(Eb #f Fs)
-	(G  #f Ab)
-	(C  #f B )
-	(Eb #f D )
-	(G  #f Fs)
-	(C  #f Ab)
-))
 (define C-arabic '(
 	(Bb #f C )
 	(Db #f E )
@@ -389,16 +342,4 @@
 	(B  #f C )
 	(Db #f E )
 	(F  #f G )
-))
-(define C-natural-minor-straight '(
-	(Eb #t C #f D Db)
-	(Ab #t Eb #f G Gb F)
-	(C  #t G #f Bb Bb A Ab)
-	(Eb #t C #f D Db)
-	(Gb #t Eb #f F)
-	(Bb #t G #f Ab B)
-	(C #f Bb #t Db)
-	(D Eb #f D #t E)
-	(Gb G #f F #t Ab)
-	(B Bb C #f Ab #t Db)
 ))
