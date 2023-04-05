@@ -26,7 +26,7 @@
      showgrid="true"
      inkscape:zoom="0.68302425"
      inkscape:cx="706.41709"
-     inkscape:cy="665.42293"
+     inkscape:cy="851.36069"
      inkscape:window-width="2240"
      inkscape:window-height="1375"
      inkscape:window-x="0"
@@ -1950,39 +1950,34 @@
        d="M 62.499999,266.59838 H 116.59838 V 212.50001"
        id="path77046-5-2" />
     <g
-       id="g55030"
-       transform="translate(0.03435443,-90)">
+       id="g6460">
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 195.00001,165.00001 -30,30"
+         d="m 195.03436,75.00001 -30,30"
          id="path51402" />
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 195.00001,165.00001 -29.99999,30"
-         id="path51526" />
-      <path
-         style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 135.00002,225.00001 -30,30"
+         d="m 135.03437,135.00001 -30,30"
          id="path51528" />
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 165.00002,195.00001 -30,30"
+         d="m 165.03437,105.00001 -30,30"
          id="path51530" />
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 105.00002,255.00001 -30,30"
+         d="m 105.03437,165.00001 -29.999996,30"
          id="path51532" />
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 135.00002,195.00001 -30,30"
+         d="m 135.03437,105.00001 -30,30"
          id="path51534" />
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#marker53648)"
-         d="m 75.00002,285.00001 60,-90"
+         d="m 75.034374,195.00001 59.999996,-90"
          id="path51536" />
       <path
          style="fill:none;fill-opacity:0.452376;stroke:#767676;stroke-width:1.1;stroke-dasharray:none;stroke-opacity:0.488552;marker-end:url(#TriangleStart)"
-         d="m 105.00002,225.00001 -30,30"
+         d="m 105.03437,135.00001 -29.999996,30"
          id="path51538" />
     </g>
     <g
