@@ -2,30 +2,34 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="600"
    height="600"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    version="1.0"
-   sodipodi:docname="Circle_of_fifths_deluxe_4.svg"
+   sodipodi:docname="fifths.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline"
    inkscape:export-filename="/home/stephent/tmp/Circle_of_fifths_deluxe.exp.2.png"
    inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-ydpi="90"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <filter
        inkscape:collect="always"
-       id="filter3996">
+       id="filter3996"
+       x="-0.036137314"
+       y="-0.035865328"
+       width="1.0722746"
+       height="1.0717307">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="5.3247395"
@@ -43,23 +47,25 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="2.4966666"
-     inkscape:cx="300"
-     inkscape:cy="189.97185"
+     inkscape:cx="300.20028"
+     inkscape:cy="190.25368"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      width="600px"
      height="600px"
-     inkscape:window-width="1598"
-     inkscape:window-height="847"
+     inkscape:window-width="2240"
+     inkscape:window-height="1354"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      inkscape:showpageshadow="false"
      borderlayer="true"
      showborder="true"
      inkscape:grid-bbox="false"
      inkscape:guide-bbox="false"
-     inkscape:window-maximized="0">
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid2656"
@@ -74,6 +80,8 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
       </cc:Work>
       <cc:Work
          rdf:about="">
@@ -81,6 +89,21 @@
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
       </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
     </rdf:RDF>
   </metadata>
   <g
