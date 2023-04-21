@@ -1,18 +1,24 @@
-all: harmonica.pdf
+all: pdf png
 	
 
 png: harmonica.png
 	
 
+pdf: harmonica.pdf
+	
+
 harmonica.png: harmonica.svg
-	rsvg-convert harmonica.svg -f png -o harmonica.png
+	inkscape --export-type=png harmonica.svg 
+	#rsvg-convert harmonica.svg -f png -o harmonica.png
 
 harmonica.pdf: harmonica.svg
-	rsvg-convert harmonica.svg -f pdf -o harmonica.pdf
+	inkscape --export-type=pdf harmonica.svg 
+	#rsvg-convert harmonica.svg -f pdf -o harmonica.pdf
 
 harmonica.svg: main.dot
 	dot -Tsvg main.dot > harmonica.svg
 
 clean:
 	rm harmonica.svg
-	rm harmonica.pdf harmonica.png
+	rm harmonica.pdf
+	rm harmonica.png
