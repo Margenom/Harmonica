@@ -1,0 +1,1 @@
+![alt Не интерактивная схема](https://github.com/Margenom/Harmonica/blob/main/harmonica.png?raw=true)
