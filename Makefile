@@ -1,11 +1,17 @@
 all: pdf png
 	
 
+gif: harmonica.gif
+	
+
 png: harmonica.png
 	
 
 pdf: harmonica.pdf
 	
+
+harmonica.gif: harmonica.png
+	magick harmonica.png harmonica.gif
 
 harmonica.png: harmonica.svg
 	inkscape --export-type=png harmonica.svg 
@@ -19,6 +25,4 @@ harmonica.svg: main.dot
 	dot -Tsvg main.dot > harmonica.svg
 
 clean:
-	rm harmonica.svg
-	rm harmonica.pdf
-	rm harmonica.png
+	rm harmonica.*
